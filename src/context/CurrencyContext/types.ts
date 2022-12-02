@@ -11,6 +11,7 @@ export interface ICurrency {
 }
 
 export interface ICurrencyContext {
-    currencies: ICurrency[];
+    currencies: ICurrency[],
+    currentCurrency: ICurrency
     
 }
