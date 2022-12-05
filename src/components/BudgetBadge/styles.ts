@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledBudgetBadge = styled.div`
 display: flex;
 justify-content: space-between;
+min-height: 100px;
 background: #7CC6FE;
 border-radius: 10px;
 box-shadow: 1px;
