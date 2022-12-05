@@ -1,20 +1,18 @@
-import { Balance } from "./components/Balance/Balance";
-import { CustomSelect } from "./components/CustomSelect/CustomSelect";
-import { CurrencyContextProvider } from "./context/CurrencyContext/CurrencyContext";
+import { Budget } from "./components/Budget/Budget";
+import { Expenses } from "./components/Expenses/Expenses";
+import { ExpensesForm } from "./components/ExpensesForm/ExpensesForm";
 import { GlobalStyle } from "./globalStyles";
 import { Container } from "./styles";
 
-function App() {
+export const App = () => {
 
   return (
     <Container>
       <GlobalStyle />
-      <CustomSelect />
-      <Balance />
       <p>Hello</p>
-    </Container>
-  
+      <Budget />
+      <Expenses />
+      <ExpensesForm/>
+    </Container> 
   );
-} 
-
-export default App;
+};

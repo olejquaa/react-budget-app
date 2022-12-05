@@ -24,6 +24,9 @@ const useCurrencyContextValue = () => {
         value: Currency.GBR,
       },
     ],
+    setNewCurrency: (currentCurrency) => {
+      setCurrencyContext((ctx) => ({ ...ctx, currentCurrency }));
+    },
   }));
 
   return currencyContext;
