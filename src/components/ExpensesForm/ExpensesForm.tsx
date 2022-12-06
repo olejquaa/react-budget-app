@@ -1,5 +1,3 @@
 export const ExpensesForm = () => {
-  return (
-    <div>ExpensesForm</div>
-  )
-}
+  return <div>ExpensesForm</div>;
+};
