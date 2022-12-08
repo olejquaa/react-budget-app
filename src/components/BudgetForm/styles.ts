@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Badge = styled.div`
+const Badge = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,7 +9,7 @@ export const Badge = styled.div`
   min-width: 300px;
 `;
 
-export const StyledInput = styled.input`
+const StyledInput = styled.input`
   display: inline-block;
 
   padding: 1px 2px;
@@ -32,7 +32,7 @@ export const StyledInput = styled.input`
   -webkit-rtl-ordering: logical;
 `;
 
-export const Button = styled.button`
+const Button = styled.button`
   box-sizing: border-box;
   padding: 10px 20px;
   min-width: 80px;
@@ -46,6 +46,6 @@ export const Button = styled.button`
   font-family: "Montserrat";
 `;
 
-export const Form = styled.form`
+const Form = styled.form``;
 
-`
+export { Badge, StyledInput, Button, Form };

@@ -9,9 +9,8 @@ export const Title = styled.h2`
 `;
 
 export const ExpensesContainer = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-width: 350px;
-
-`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 350px;
+`;

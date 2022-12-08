@@ -1,17 +1,19 @@
 import { ReactNode } from "react";
 
-export interface IExpensesContextProviderProps {
+interface IExpensesContextProviderProps {
   children: ReactNode;
 }
 
-export interface IExpense {
+interface IExpense {
   id: string;
   name: string;
   cost: number;
 }
 
-export interface IExpensesContext {
+interface IExpensesContext {
   expenses: IExpense[];
   addNewExpense: (expense: IExpense) => void;
   deleteExpense: (id: string) => void;
 }
+
+export type { IExpensesContextProviderProps, IExpense, IExpensesContext };

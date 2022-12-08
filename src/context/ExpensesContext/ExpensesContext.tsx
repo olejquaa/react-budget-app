@@ -20,7 +20,7 @@ export const useExpensesContextValue = () => {
     ],
 
     addNewExpense: (newExpense: IExpense) => {
-      setExpensesContext((ctx) => ({ ...ctx, expenses: [...ctx.expenses, newExpense]}));
+      setExpensesContext((ctx) => ({ ...ctx, expenses: [...ctx.expenses, newExpense] }));
     },
 
     deleteExpense: (id) => {

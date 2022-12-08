@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Search = styled.input`
+const Search = styled.input`
   width: 90%;
   height: 20px;
   margin-top: 10px;
@@ -15,3 +15,5 @@ export const Search = styled.input`
     color: gray;
   }
 `;
+
+export { Search };

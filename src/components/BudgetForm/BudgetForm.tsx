@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { useBudgetContext } from "../../context/BudgetContext/BudgetContext";
+import { useBudgetContext } from "../../context";
 import { Balance } from "../Balance/Balance";
-import { Badge, Button, Form, StyledInput } from "./styles";
+import { Badge, Form, StyledInput, Button } from "./styles";
 
 interface IFormValues {
   value: number;
@@ -23,7 +23,6 @@ export const BudgetForm = () => {
   const handleClick = () => {
     setEditMode(!isEditMode);
   };
-
 
   return (
     <Badge>

@@ -1,8 +1,9 @@
 import { createContext, useContext, useState } from "react";
-import { Currency } from "../../types/types";
+import { Currency } from "../../config";
+
 import { ICurrencyContext, ICurrencyContextProviderProps } from "./types";
 
-export const CurrencyContext = createContext<ICurrencyContext>({} as ICurrencyContext);
+const CurrencyContext = createContext<ICurrencyContext>({} as ICurrencyContext);
 
 const useCurrencyContextValue = () => {
   const [currencyContext, setCurrencyContext] = useState<ICurrencyContext>(() => ({
@@ -32,12 +33,14 @@ const useCurrencyContextValue = () => {
   return currencyContext;
 };
 
-export const useCurrencyContext = () => useContext<ICurrencyContext>(CurrencyContext);
+const useCurrencyContext = () => useContext<ICurrencyContext>(CurrencyContext);
 
-export const CurrencyContextProvider = ({ children }: ICurrencyContextProviderProps) => {
+const CurrencyContextProvider = ({ children }: ICurrencyContextProviderProps) => {
   return (
     <CurrencyContext.Provider value={useCurrencyContextValue()}>
       {children}
     </CurrencyContext.Provider>
   );
 };
+
+export { CurrencyContext, useCurrencyContextValue, useCurrencyContext, CurrencyContextProvider };

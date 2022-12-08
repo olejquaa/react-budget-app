@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
-import { useBudgetContext } from "../../context/BudgetContext/BudgetContext";
-import { useCurrencyContext } from "../../context/CurrencyContext/CurrencyContext";
-import { useExpensesContext } from "../../context/ExpensesContext/ExpensesContext";
+import { useCurrencyContext, useBudgetContext, useExpensesContext } from "../../context";
 import { StyledRemaining, Title } from "./styles";
 
-export const RemainingBadge = () => {
+const RemainingBadge = () => {
   const [overspending, setOverspending] = useState(false);
 
   const { currentCurrency } = useCurrencyContext();
@@ -27,3 +25,5 @@ export const RemainingBadge = () => {
     </StyledRemaining>
   );
 };
+
+export { RemainingBadge };

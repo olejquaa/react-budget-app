@@ -1,10 +1,7 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { v4 } from "uuid";
-import {
-  useExpensesContext
-} from "../../context/ExpensesContext/ExpensesContext";
+import { useExpensesContext } from "../../context";
 import { IExpense } from "../../context/ExpensesContext/types";
-
 import { StyledForm, Errors, Input, Title, FormButton } from "./styles";
 
 interface IFormValues {
@@ -22,16 +19,16 @@ export const ExpensesForm = () => {
     reset,
   } = useForm<IExpense>();
 
-    const onSubmit: SubmitHandler<IFormValues> = (data) => {
-        const newExpense = {
-            id: v4(),
-            name: data.name,
-            cost: +data.cost,
-        }
-        addNewExpense(newExpense);
-        reset();
-    }
-    
+  const onSubmit: SubmitHandler<IFormValues> = (data) => {
+    const newExpense = {
+      id: v4(),
+      name: data.name,
+      cost: +data.cost,
+    };
+    addNewExpense(newExpense);
+    reset();
+  };
+
   return (
     <StyledForm id="expense-form" onSubmit={handleSubmit(onSubmit)}>
       <Title>Add expense</Title>
@@ -55,7 +52,7 @@ export const ExpensesForm = () => {
         })}
       />
       {errors.cost && <Errors>{errors.cost.message}</Errors>}
-      <FormButton form="expense-form" type="submit" >
+      <FormButton form="expense-form" type="submit">
         Done
       </FormButton>
     </StyledForm>

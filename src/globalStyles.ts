@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
@@ -30,3 +30,5 @@ input::-webkit-inner-spin-button {
   min-height: 100vh;
 }
 `;
+
+export { GlobalStyle };

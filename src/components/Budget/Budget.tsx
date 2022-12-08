@@ -1,7 +1,4 @@
-import { BudgetBadge } from "../BudgetBadge/BudgetBadge";
-import { CustomSelect } from "../CustomSelect/CustomSelect";
-import { RemainingBadge} from "../RemainingBadge/RemainingBadge";
-import { SpentBadge } from "../SpentBadge/SpentBadge";
+import { BudgetBadge, CustomSelect, RemainingBadge, SpentBadge } from "..";
 import { BudgetContainer, Header, Title } from "./styles";
 
 export const Budget = () => {
@@ -13,7 +10,7 @@ export const Budget = () => {
       </Header>
       <BudgetBadge />
       <RemainingBadge />
-      <SpentBadge/>
+      <SpentBadge />
     </BudgetContainer>
   );
 };

@@ -7,6 +7,8 @@ interface IProps {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const ExpensesSearch = ({ value, onChange }: IProps) => {
-  return <Search value={value} onChange={onChange} placeholder="Search..."/>
+const ExpensesSearch = ({ value, onChange }: IProps) => {
+  return <Search value={value} onChange={onChange} placeholder="Search..." />;
 };
+
+export { ExpensesSearch };

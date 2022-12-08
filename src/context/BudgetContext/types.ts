@@ -1,14 +1,16 @@
 import { ReactNode } from "react";
 
-export interface IBudgetContextProviderProps {
+interface IBudgetContextProviderProps {
   children: ReactNode;
 }
 
-export interface IBudgetContext {
+interface IBudgetContext {
   balance: IBudget;
   setNewBalanceValue: (balance:IBudget) => void;
 }
 
-export interface IBudget {
+interface IBudget {
   value: number;
 }
+
+export type {IBudgetContextProviderProps, IBudgetContext, IBudget}

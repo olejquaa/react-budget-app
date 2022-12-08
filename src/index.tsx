@@ -1,9 +1,11 @@
 import ReactDOM from "react-dom/client";
 import { App } from "./App";
-import { AppContext } from "./context/AppContext/AppContext";
-import { BudgetContextProvider } from "./context/BudgetContext/BudgetContext";
-import { CurrencyContextProvider } from "./context/CurrencyContext/CurrencyContext";
-import { ExpensesContextProvider } from "./context/ExpensesContext/ExpensesContext";
+import {
+  AppContext,
+  CurrencyContextProvider,
+  BudgetContextProvider,
+  ExpensesContextProvider,
+} from "./context";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(

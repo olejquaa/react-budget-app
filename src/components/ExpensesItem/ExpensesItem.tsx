@@ -1,8 +1,5 @@
-import { useCurrencyContext } from "../../context/CurrencyContext/CurrencyContext";
-import {
-  useExpensesContext,
-  useExpensesContextValue,
-} from "../../context/ExpensesContext/ExpensesContext";
+
+import { useCurrencyContext, useExpensesContext } from "../../context";
 import { IExpense } from "../../context/ExpensesContext/types";
 import {
   BadgeContainer,
@@ -16,7 +13,7 @@ interface IProps {
   expense: IExpense;
 }
 
-export const ExpensesItem = ({ expense }: IProps) => {
+const ExpensesItem = ({ expense }: IProps) => {
   const { currentCurrency } = useCurrencyContext();
   const { deleteExpense } = useExpensesContext();
   const handleDeleteExpense = () => {
@@ -38,3 +35,5 @@ export const ExpensesItem = ({ expense }: IProps) => {
     </ExpensesItemContainer>
   );
 };
+
+export { ExpensesItem };
