@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from "react";
-
 import { IBudgetContext, IBudgetContextProviderProps } from "./types";
 
 export const BudgetContext = createContext<IBudgetContext>({} as IBudgetContext);
@@ -11,8 +10,8 @@ export const useBudgetContextValue = () => {
     },
 
     setNewBalanceValue: (balance) => {
-      setBudgetContext((ctx) => ({ ...ctx, balance} ));
-    }
+      setBudgetContext((ctx) => ({ ...ctx, balance }));
+    },
   }));
 
   return budgetContext;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledForm = styled.div`
+export const Badge = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,14 +25,14 @@ export const StyledInput = styled.input`
   font-size: inherit;
   text-align: center;
   writing-mode: horizontal-tb !important;
-  color: white;
-  opacity: 60%;
+  color: gray;
+  opacity: 90%;
 
   appearance: auto;
   -webkit-rtl-ordering: logical;
 `;
 
-export const StyledButton = styled.button`
+export const Button = styled.button`
   box-sizing: border-box;
   padding: 10px 20px;
   min-width: 80px;
@@ -45,3 +45,7 @@ export const StyledButton = styled.button`
 
   font-family: "Montserrat";
 `;
+
+export const Form = styled.form`
+
+`

@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useBudgetContext } from "../../context/BudgetContext/BudgetContext";
+import { useToggle } from "../../hooks/useToggle";
 import { Balance } from "../Balance/Balance";
-import { StyledButton, StyledForm, StyledInput } from "./styles";
+import { Badge, Button, Form, StyledInput } from "./styles";
+
 interface IFormValues {
   value: string;
 }
 
 export const BudgetForm = () => {
-  const [active, setActive] = useState(true);
+  const [isEditMode, setEditMode] = useState(true);
 
   const { setNewBalanceValue } = useBudgetContext();
   const { register, handleSubmit } = useForm<IFormValues>();
@@ -20,13 +22,14 @@ export const BudgetForm = () => {
   };
 
   const handleClick = () => {
-    setActive(!active);
+    setEditMode(!isEditMode);
   };
 
+
   return (
-    <StyledForm>
-      <form id="balance-form" onSubmit={handleSubmit(onSubmit)}>
-        {active ? (
+    <Badge>
+      <Form id="balance-form" onSubmit={handleSubmit(onSubmit)}>
+        {isEditMode ? (
           <Balance />
         ) : (
           <StyledInput
@@ -38,11 +41,11 @@ export const BudgetForm = () => {
             {...register("value")}
           />
         )}
-      </form>
-      <StyledButton form="balance-form" type="submit" onClick={handleClick}>
+      </Form>
+      <Button form="balance-form" type="submit" onClick={handleClick}>
         {" "}
-        {active ? "Edit" : "Save"}
-      </StyledButton>
-    </StyledForm>
+        {isEditMode ? "Edit" : "Save"}
+      </Button>
+    </Badge>
   );
 };

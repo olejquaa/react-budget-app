@@ -23,25 +23,25 @@ export const CustomSelect = () => {
           fontSize: 12,
           borderColor: state.isFocused ? "blue" : "gray",
         }),
-        valueContainer: (baseStyles, state) => ({
+        valueContainer: (baseStyles) => ({
           ...baseStyles,
           padding: 2,
         }),
-        indicatorSeparator: (baseStyles, state) => ({
+        indicatorSeparator: (baseStyles) => ({
           ...baseStyles,
           padding: 0,
         }),
-        dropdownIndicator: (baseStyles, state) => ({
+        dropdownIndicator: (baseStyles) => ({
           ...baseStyles,
           padding: 2,
         }),
-        menuList: (baseStyles, state) => ({
+        menuList: (baseStyles) => ({
           ...baseStyles,
-          fontSize: 10,
+          fontSize: 12,
           padding: 2,
           borderRadius: 10,
         }),
-        menu: (baseStyles, state) => ({
+        menu: (baseStyles) => ({
           ...baseStyles,
           top: 20,
         }),

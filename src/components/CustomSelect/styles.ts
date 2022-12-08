@@ -1,6 +1,4 @@
-
 import styled from "styled-components";
-import { useState } from "react";
 
 export const StyledSelect = styled.select`
   display: inline-block;
@@ -8,7 +6,4 @@ export const StyledSelect = styled.select`
   height: 34px;
   line-height: 30px;
   position: relative;
-  
-  `
-
-
+`;
