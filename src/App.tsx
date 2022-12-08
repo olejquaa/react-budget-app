@@ -1,13 +1,15 @@
 import { Budget, Expenses } from "./components";
 import { GlobalStyle } from "./globalStyles";
-import { Container } from "./styles";
+import { Container, Iphone } from "./styles";
 
 export const App = () => {
   return (
-    <Container>
-      <GlobalStyle />
-      <Budget />
-      <Expenses />
-    </Container>
+    <Iphone>
+      <Container>
+        <GlobalStyle />
+        <Budget />
+        <Expenses />
+      </Container>
+    </Iphone>
   );
 };

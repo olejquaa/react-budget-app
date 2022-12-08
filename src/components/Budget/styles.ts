@@ -6,7 +6,10 @@ const BudgetContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 350px;
+
+  padding: 15px;
+  border-radius: 30px;
+  overflow: scroll;
 `;
 
 const Header = styled.div`
@@ -14,4 +17,5 @@ const Header = styled.div`
   flex-direction: row;
   justify-content: space-between;
 `;
+
 export { Title, BudgetContainer, Header };

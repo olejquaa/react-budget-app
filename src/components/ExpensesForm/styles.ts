@@ -5,6 +5,7 @@ export const StyledForm = styled.form`
   flex-direction: column;
 
   margin-top: 10px;
+  padding: 5px;
 `;
 
 export const Title = styled.h2``;
@@ -18,7 +19,6 @@ export const Input = styled.input`
 
   font-family: "Montserrat";
   font-size: 14px;
-  box-shadow: 20px;
   align-self: center;
 
   ::placeholder {
@@ -35,8 +35,11 @@ export const Errors = styled.span`
 
 export const FormButton = styled.button`
   box-sizing: border-box;
+  width: 90%;
   margin-top: 10px;
+  margin-bottom: 30px;
   padding: 10px;
+  align-self: center;
 
   border: none;
   border-radius: 10px;

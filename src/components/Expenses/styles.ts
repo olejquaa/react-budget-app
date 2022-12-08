@@ -5,12 +5,15 @@ export const Title = styled.h2`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 350px;
+
 `;
 
 export const ExpensesContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 350px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+
 `;
