@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useBudgetContext } from "../../context/BudgetContext/BudgetContext";
-import { useToggle } from "../../hooks/useToggle";
 import { Balance } from "../Balance/Balance";
 import { Badge, Button, Form, StyledInput } from "./styles";
 
 interface IFormValues {
-  value: string;
+  value: number;
 }
 
 export const BudgetForm = () => {

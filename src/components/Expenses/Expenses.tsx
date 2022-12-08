@@ -1,34 +1,35 @@
 import { useEffect, useState } from "react";
-import { useExpensesContextValue } from "../../context/ExpensesContext/ExpensesContext";
+import { useExpensesContext } from "../../context/ExpensesContext/ExpensesContext";
 import { useDebounce } from "../../hooks/useDebounce";
 import { useInput } from "../../hooks/useInput";
+import { ExpensesForm } from "../ExpensesForm/ExpensesForm";
 import { ExpensesList } from "../ExpensesList/ExpensesList";
 import { ExpensesSearch } from "../ExpensesSearch/ExpensesSearch";
-import { Title } from "./styles";
+import { ExpensesContainer, Title } from "./styles";
 
 export const Expenses = () => {
-  const { expenses } = useExpensesContextValue();
+  const { expenses } = useExpensesContext();
   const [expensesStore, updateExpensesStore] = useState(expenses);
 
   const search = useInput();
-   useDebounce(search.value);
+  const debouncedSearchValue = useDebounce(search.value);
 
   useEffect(() => {
     updateExpensesStore(
-      expenses.filter((expense) => expense.name.toLowerCase().includes(search.value.toLowerCase())),
+      expenses.filter((expense) =>
+        expense.name.toLowerCase().includes(debouncedSearchValue.toLowerCase()),
+      ),
     );
-  }, [search.value, expenses]);
+  }, [debouncedSearchValue, expenses]);
 
-
- 
-  
   return (
-    <div>
+    <ExpensesContainer>
       <Title>
-        <h2>Expenses</h2>
+       Expenses
       </Title>
       <ExpensesSearch type="text" {...search} />
       <ExpensesList expenses={expensesStore} />
-    </div>
+      <ExpensesForm/>
+    </ExpensesContainer>
   );
 };

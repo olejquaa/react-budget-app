@@ -1,5 +1,6 @@
 import { IExpense } from "../../context/ExpensesContext/types";
 import { ExpensesItem } from "../ExpensesItem/ExpensesItem";
+import { StyledList } from "./styles";
 
 
 interface IProps {
@@ -8,9 +9,12 @@ interface IProps {
 
 export const ExpensesList = ({ expenses }: IProps) => {
   return (
-    <div>
-      {expenses.length > 0 && <ExpensesItem expenses={expenses} />}
+    <StyledList>
+
+      {expenses.length > 0 && expenses.map((expenses) => {
+        return <ExpensesItem expense={expenses} key={expenses.id} />;
+      })}
       {expenses.length==0 && "Ooops 🙈" }
-    </div>
+    </StyledList>
   );
 };

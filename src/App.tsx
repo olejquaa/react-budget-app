@@ -10,7 +10,6 @@ export const App = () => {
       <GlobalStyle />
       <Budget />
       <Expenses />
-      {/* <ExpensesForm/> */}
     </Container> 
   );
 };

@@ -8,7 +8,5 @@ interface IProps {
 }
 
 export const ExpensesSearch = ({ value, onChange }: IProps) => {
-  return <div>
-  <Search value={value} onChange={onChange} placeholder="Search..."/>
-  </div>
+  return <Search value={value} onChange={onChange} placeholder="Search..."/>
 };

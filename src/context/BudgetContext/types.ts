@@ -10,5 +10,5 @@ export interface IBudgetContext {
 }
 
 export interface IBudget {
-  value: string;
+  value: number;
 }

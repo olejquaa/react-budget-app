@@ -1,19 +1,40 @@
 import { useCurrencyContext } from "../../context/CurrencyContext/CurrencyContext";
-import { useExpensesContextValue } from "../../context/ExpensesContext/ExpensesContext";
+import {
+  useExpensesContext,
+  useExpensesContextValue,
+} from "../../context/ExpensesContext/ExpensesContext";
 import { IExpense } from "../../context/ExpensesContext/types";
+import {
+  BadgeContainer,
+  CostBadge,
+  DeleteButton,
+  ExpensesItemContainer,
+  StyledExpensesItem,
+} from "./styles";
 
 interface IProps {
-  expenses: IExpense[];
+  expense: IExpense;
 }
 
-export const ExpensesItem = ({ expenses }: IProps) => {
+export const ExpensesItem = ({ expense }: IProps) => {
   const { currentCurrency } = useCurrencyContext();
+  const { deleteExpense } = useExpensesContext();
+  const handleDeleteExpense = () => {
+    deleteExpense(expense.id);
+  };
 
-  const getExpenseItem = expenses.map((expense) => (
-    <li key={expense.id}>
-      {expense.name} 
-      <div>{currentCurrency.value}{expense.cost}</div>
-    </li>
-  ));
-  return <ul>{getExpenseItem}</ul>;
+  return (
+    <ExpensesItemContainer>
+      <StyledExpensesItem key={expense.id}>
+        {expense.name}
+        <BadgeContainer>
+          <CostBadge>
+            {currentCurrency.value}
+            {expense.cost}
+          </CostBadge>
+          <DeleteButton onClick={handleDeleteExpense}></DeleteButton>
+        </BadgeContainer>
+      </StyledExpensesItem>
+    </ExpensesItemContainer>
+  );
 };

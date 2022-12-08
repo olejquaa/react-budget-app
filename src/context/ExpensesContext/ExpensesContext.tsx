@@ -1,6 +1,6 @@
-import { title } from "process";
 import { createContext, useContext, useState } from "react";
 import { IExpense, IExpensesContext, IExpensesContextProviderProps } from "./types";
+import { v4 } from "uuid";
 
 export const ExpensesContext = createContext<IExpensesContext>({} as IExpensesContext);
 
@@ -8,19 +8,19 @@ export const useExpensesContextValue = () => {
   const [expensesContext, setExpensesContext] = useState<IExpensesContext>(() => ({
     expenses: [
       {
-        id: "1",
+        id: v4(),
         name: "Beer",
         cost: 4,
       },
       {
-        id: "2",
+        id: v4(),
         name: "Pizza",
         cost: 15,
       },
     ],
 
-    addNewExpense: (expense: IExpense) => {
-      setExpensesContext((ctx) => ({ ...ctx, expenses: [...ctx.expenses, expense] }));
+    addNewExpense: (newExpense: IExpense) => {
+      setExpensesContext((ctx) => ({ ...ctx, expenses: [...ctx.expenses, newExpense]}));
     },
 
     deleteExpense: (id) => {

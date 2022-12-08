@@ -6,7 +6,7 @@ export const BudgetContext = createContext<IBudgetContext>({} as IBudgetContext)
 export const useBudgetContextValue = () => {
   const [budgetContext, setBudgetContext] = useState<IBudgetContext>(() => ({
     balance: {
-      value: "0",
+      value: 100,
     },
 
     setNewBalanceValue: (balance) => {
