@@ -14,6 +14,6 @@ export const ExpensesContainer = styled.div`
   justify-content: space-between;
   box-sizing: border-box;
   width: 100%;
-  padding: 15px;
+  padding: 10px;
 
 `;

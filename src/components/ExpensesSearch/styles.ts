@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Search = styled.input`
   width: 90%;
-  height: 20px;
+  height: 30px;
   margin-top: 10px;
 
   font-family: "Montserrat";

@@ -12,7 +12,7 @@ export const Title = styled.h2``;
 
 export const Input = styled.input`
   width: 90%;
-  height: 20px;
+  height: 30px;
 
   align-self: center;
   margin-top: 10px;
@@ -36,8 +36,7 @@ export const Errors = styled.span`
 export const FormButton = styled.button`
   box-sizing: border-box;
   width: 90%;
-  margin-top: 10px;
-  margin-bottom: 30px;
+  margin-top: 30px;
   padding: 10px;
   align-self: center;
 

@@ -7,7 +7,7 @@ const BudgetContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  padding: 15px;
+  padding: 10px;
   border-radius: 30px;
   overflow: scroll;
 `;

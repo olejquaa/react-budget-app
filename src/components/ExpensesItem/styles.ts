@@ -6,10 +6,8 @@ export const ExpensesItemContainer = styled.div`
   flex-direction: column;
 
   width: 100%;
-  max-height: 200px;
+  min-height: 50px;
 
-  overflow: scroll;
-  overflow-x: scroll;
 `;
 
 export const StyledExpensesItem = styled.li`
