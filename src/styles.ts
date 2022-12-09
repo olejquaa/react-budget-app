@@ -8,7 +8,7 @@ export const Container = styled.div`
   grid-template-columns: 1fr;
 
   max-height: 770px;
-  margin-top: 10px;
+  margin-top: 20px;
 
   position: relative;
   border-radius: 0px 0px 40px 40px;
