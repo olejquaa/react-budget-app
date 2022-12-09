@@ -6,7 +6,7 @@ Try demo ->
 
 ## How it works? Look:  
 
-<img src="https://user-images.githubusercontent.com/108752780/206574968-dcc8bd8b-adb6-4ece-a8c8-a79e1a0b2bef.gif" width=30% height=30%>
+<img src="https://user-images.githubusercontent.com/108752780/206658242-5f4a9587-be85-41b1-934b-9f85bb694f0e.gif" width=33% height=33%>
 
 
 
@@ -20,11 +20,11 @@ Try demo ->
 > # Build with:
 > * React
 > * TypeScript
-> *Custom Hooks
-> *Styled-components
-> *React-select
-> *React-hook-form
-> *uuid
+> * Custom Hooks
+> * Styled-components
+> * React-select
+> * React-hook-form
+> * uuid
 
 ==============
 
