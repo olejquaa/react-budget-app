@@ -1,6 +1,6 @@
 import { IExpense } from "../../context/ExpensesContext/types";
 import { ExpensesItem } from "../ExpensesItem/ExpensesItem";
-import { StyledList } from "./styles";
+import { EmptyListMessage, StyledList } from "./styles";
 
 
 interface IProps {
@@ -14,7 +14,7 @@ const ExpensesList = ({ expenses }: IProps) => {
         expenses.map((expenses) => {
           return <ExpensesItem expense={expenses} key={expenses.id} />;
         })}
-      {expenses.length === 0 && "Ooops 🙈"}
+      {expenses.length === 0 && <EmptyListMessage>Ooops 🙈</EmptyListMessage>}
     </StyledList>
   );
 };
