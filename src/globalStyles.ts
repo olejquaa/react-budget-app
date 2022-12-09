@@ -28,6 +28,14 @@ input::-webkit-inner-spin-button {
 
 button {
   cursor: pointer;
+  :hover {
+    background-color: yellow;
+  }
+  
+  :active {
+  transform: translate(0, 2px);
+}
+
 }
 
 #root {
