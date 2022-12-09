@@ -26,6 +26,10 @@ input::-webkit-inner-spin-button {
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
+button {
+  cursor: pointer;
+}
+
 #root {
   display: flex;
   align-items: center;
@@ -40,5 +44,7 @@ input::-webkit-inner-spin-button {
   width: 0;
 }
 `;
+
+
 
 export { GlobalStyle };
