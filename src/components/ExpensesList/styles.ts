@@ -7,12 +7,15 @@ const StyledList = styled.div`
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  top: 0;
+
+  -webkit-justify-content: flex-start;
 
   min-height: 170px;
+  max-height: 220px;
   padding: 10px;
 
   overflow: scroll;
-  overflow-x: scroll;
 `;
 
 export { StyledList };
