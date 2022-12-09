@@ -20,11 +20,11 @@ Try demo ->
 > # Build with:
 > * React
 > * TypeScript
-> *Custom Hooks
-> *Styled-components
-> *React-select
-> *React-hook-form
-> *uuid
+> * Custom Hooks
+> * Styled-components
+> * React-select
+> * React-hook-form
+> * uuid
 
 ==============
 
