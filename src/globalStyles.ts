@@ -31,9 +31,8 @@ input::-webkit-inner-spin-button {
   align-items: center;
   justify-content: center;
 
-  min-height: 100vh;
-
-background: beige;
+  min-height: 100vh; 
+  background: beige;
 }
 
 
