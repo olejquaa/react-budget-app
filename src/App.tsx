@@ -5,8 +5,8 @@ import { Container, Iphone } from "./styles";
 export const App = () => {
   return (
     <Iphone>
+      <GlobalStyle />
       <Container>
-        <GlobalStyle />
         <Budget />
         <Expenses />
       </Container>
