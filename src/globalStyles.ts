@@ -10,6 +10,10 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   position: relative;
 }
 
+h2 {
+  font-weight: 500;
+}
+
 ol, ul {
   list-style: none;
 }
@@ -31,7 +35,7 @@ button {
   :hover {
     background-color: yellow;
   }
-  
+
   :active {
   transform: translate(0, 2px);
 }
