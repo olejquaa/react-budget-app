@@ -1,6 +1,5 @@
 # react-budget-app
 
-Try demo -> 
 # Salut! You spend a lot of money? I guess this app will help you save some for tasty burger or morning coffee ;)
 
 
