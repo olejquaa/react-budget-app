@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/react-budget-app/static/js/main.aecbef81.js",
+    "main.js": "/react-budget-app/static/js/main.5c237995.js",
     "static/media/iphone.png": "/react-budget-app/static/media/iphone.562b3acdc4b90c731afd.png",
     "index.html": "/react-budget-app/index.html",
     "static/media/delete_icon.svg": "/react-budget-app/static/media/delete_icon.b5ce850d2339ed2102c5710c49eb5866.svg",
-    "main.aecbef81.js.map": "/react-budget-app/static/js/main.aecbef81.js.map"
+    "main.5c237995.js.map": "/react-budget-app/static/js/main.5c237995.js.map"
   },
   "entrypoints": [
-    "static/js/main.aecbef81.js"
+    "static/js/main.5c237995.js"
   ]
 }
